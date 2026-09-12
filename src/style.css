@@ -245,7 +245,7 @@ code,
   appearance: none;
   height: 2.7rem;
   border: 1px solid #5a4634;
-  border-radius: 6px;
+  border-radius: 4px;
   background:
     linear-gradient(180deg, #f6ead4 0%, var(--keytop) 72%);
   color: var(--ink);
@@ -266,7 +266,9 @@ code,
 .key.wide {
   grid-column: 1 / -1;
   height: 2.35rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  font-size: 0.72rem;
 }
 
 .key:focus-visible {
@@ -424,9 +426,31 @@ code,
   font-size: 1.05rem;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 520px) {
   .key {
     height: 2.85rem;
+  }
+
+  .desk[data-state='seeded'] .tape {
+    height: 2.8rem;
+  }
+
+  .desk[data-state='seeded'] .pad {
+    gap: 0.32rem;
+    padding: 0.45rem;
+  }
+
+  .desk[data-state='seeded'] .key {
+    height: 2.05rem;
+    font-size: 0.82rem;
+  }
+
+  .desk[data-state='seeded'] .key.wide {
+    height: 1.75rem;
+  }
+
+  .note {
+    max-width: 22rem;
   }
 }
 

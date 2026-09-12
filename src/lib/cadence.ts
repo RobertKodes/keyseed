@@ -15,7 +15,7 @@ export const PAD_KEYS = [
   { code: 'KeyK', label: 'K', wide: false },
   { code: 'KeyL', label: 'L', wide: false },
   { code: 'Semicolon', label: ';', wide: false },
-  { code: 'Space', label: '␣', wide: true },
+  { code: 'Space', label: 'space', wide: true },
 ] as const
 
 export type PadCode = (typeof PAD_KEYS)[number]['code']
